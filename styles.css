@@ -1,0 +1,262 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIÁVEIS */
+:root {
+  --bg-dark: #0b0d10;
+  --bg-card: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.12);
+
+  --text-main: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.7);
+
+  --whatsapp: #25d366;
+
+  --radius: 22px;
+  --shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+}
+
+/* BODY */
+body {
+  min-height: 100vh;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  background: radial-gradient(
+      900px 600px at 20% -10%,
+      rgba(37, 211, 102, 0.18),
+      transparent 55%
+    ),
+    linear-gradient(180deg, #050506, var(--bg-dark));
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 14px;
+}
+
+/* WRAP */
+.wrap {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* CAIXA PRINCIPAL */
+.Caixa {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  padding: 22px 18px;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+/* AVATAR */
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* NOME */
+.cabecalho h1 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* SUBTÍTULO */
+.cabecalho p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* REDES SOCIAIS */
+.social {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+/* BOTÕES DE ÍCONE */
+.iconbtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.iconbtn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* BOTÃO PRINCIPAL WHATSAPP */
+.hero {
+  margin-top: 22px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 18px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(240, 240, 240, 0.9)
+  );
+  color: #0a0a0a;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.55);
+}
+
+/* ÍCONE WHATSAPP GRANDE */
+.wa-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: rgba(37, 211, 102, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--whatsapp);
+}
+
+/* LISTA DE LINKS */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+/* BOTÕES DE LINK */
+.linkbtn {
+  height: 54px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid var(--border);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.linkbtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* RODAPÉ */
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ACESSIBILIDADE */
+a:focus-visible {
+  outline: 2px solid var(--whatsapp);
+  outline-offset: 3px;
+}
+
+/* =========================
+   AJUSTES MOBILE (CELULAR)
+   ========================= */
+@media (max-width: 480px) {
+
+  body {
+    padding: 18px 12px;
+  }
+
+  .Caixa {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+
+  /* AVATAR */
+  .avatar {
+    width: 84px;
+    height: 84px;
+  }
+
+  /* NOME */
+  .cabecalho h1 {
+    font-size: 21px;
+  }
+
+  /* SUBTÍTULO */
+  .cabecalho p {
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
+
+  /* ÍCONES SOCIAIS */
+  .iconbtn {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* BOTÃO PRINCIPAL WHATSAPP */
+  .hero {
+    padding: 18px;
+    border-radius: 16px;
+    font-size: 15px;
+  }
+
+  .wa-badge {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* LISTA DE LINKS */
+  .list {
+    gap: 12px;
+  }
+
+  .linkbtn {
+    height: 56px; /* melhor para toque */
+    font-size: 15px;
+    border-radius: 16px;
+  }
+
+  /* RODAPÉ */
+  .footer {
+    font-size: 11.5px;
+    margin-top: 18px;
+  }
+}
